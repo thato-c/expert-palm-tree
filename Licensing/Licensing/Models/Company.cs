@@ -4,7 +4,7 @@ namespace Licensing.Models
 {
     public class Company
     {
-        public int Id { get; set; }
+        public int CompanyId { get; set; }
 
         [Required]
         [StringLength(50)]

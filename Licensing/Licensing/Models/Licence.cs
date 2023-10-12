@@ -5,7 +5,7 @@ namespace Licensing.Models
 {
     public class Licence
     {
-        public int Id { get; set; }
+        public int LicenceId { get; set; }
 
         [Required]
         public string Name { get; set; }
