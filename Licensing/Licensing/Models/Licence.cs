@@ -15,5 +15,7 @@ namespace Licensing.Models
 
         [Required]
         public decimal Cost { get; set; }
+
+        public ICollection<LicencePurchase> LicencePurchases { get; set; }
     }
 }

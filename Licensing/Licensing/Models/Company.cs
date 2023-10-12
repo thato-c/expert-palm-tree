@@ -16,5 +16,7 @@ namespace Licensing.Models
         [Required]
         [EmailAddress]
         public string Email { get; set; }
+
+        public ICollection<LicencePurchase> LicencePurchases { get; set; }
     }
 }
