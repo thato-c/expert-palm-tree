@@ -19,6 +19,7 @@
             <th>
                 Email
             </th>
+            <th></th>
         </tr>
         @foreach (var company in Model)
         {
@@ -28,6 +29,9 @@
                     <td>@company.Name</td>
                     <td>@company.PhoneNumber</td>
                     <td>@company.Email</td>
+                    <td>
+                        <a asp-action="Update" asp-route-id="@company.CompanyId">Update</a>
+                    </td>
                 </tr>
             }
         }
