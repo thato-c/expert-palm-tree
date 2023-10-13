@@ -8,7 +8,7 @@ namespace Licensing.ViewModels
         public string Name { get; set; }
 
         [Required(ErrorMessage = "Phone number is required")]
-        public string Phone { get; set; }
+        public string PhoneNumber { get; set; }
 
         [Required(ErrorMessage = "Email is required")]
         [EmailAddress]

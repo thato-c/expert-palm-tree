@@ -6,7 +6,7 @@
 
 <h1>Create a New Company</h1>
 
-<form asp-controller="Company" asp-action="Create" method="post">
+<form asp-controller="Companies" asp-action="Create" method="post">
     <div class="form-group">
         <label asp-for="Name">Company Name</label>
         <input asp-for="Name" class="form-control" />
@@ -14,9 +14,9 @@
     </div>
 
     <div class="form-group">
-        <label asp-for="Phone">Phone</label>
-        <input asp-for="Phone" class="form-control" />
-        <span asp-validation-for="Phone" class="text-danger"></span>
+        <label asp-for="PhoneNumber">Phone</label>
+        <input asp-for="PhoneNumber" class="form-control" />
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
     </div>
 
     <div class="form-group">
