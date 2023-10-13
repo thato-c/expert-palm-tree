@@ -15,10 +15,10 @@ namespace Licensing.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             // Retrieve a list of companies from the database
-            var companies = _context.Companies.ToList();
+            var companies = await _context.Companies.ToListAsync();
 
             if (companies.Count == 0)
             {
@@ -37,7 +37,7 @@ namespace Licensing.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(CompanyViewModel model)
+        public async Task<IActionResult> Create(CompanyViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -51,7 +51,7 @@ namespace Licensing.Controllers
 
                 // Add and save the new company to the database
                 _context.Companies.Add(Company);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
 
                 return RedirectToAction("Index");
             }
