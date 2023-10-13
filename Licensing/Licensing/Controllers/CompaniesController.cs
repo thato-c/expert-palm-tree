@@ -1,5 +1,6 @@
 ﻿using Licensing.Data;
 using Licensing.Models;
+using Licensing.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Licensing.Controllers
@@ -25,6 +26,12 @@ namespace Licensing.Controllers
             }
             
             return View(companies);
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
         }
     }
 }
