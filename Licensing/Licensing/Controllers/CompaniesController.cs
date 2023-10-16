@@ -58,23 +58,5 @@ namespace Licensing.Controllers
 
             return View(model);
         }
-
-        [HttpGet]
-        public async Task<IActionResult> Update(int? id) 
-        {
-            if (id == null || _context.Companies == null)
-            {
-                return NotFound();
-            }
-
-            var company = await _context.Companies.FirstOrDefaultAsync(c => c.CompanyId == id);
-
-            if (company == null)
-            {
-                return NotFound();
-            }
-
-            return View(company);
-        }
     }
 }
