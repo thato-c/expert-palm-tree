@@ -13,5 +13,8 @@ namespace Licensing.ViewModels
         [Required(ErrorMessage = "Email is required")]
         [EmailAddress]
         public string Email { get; set; }
+
+        [Required(ErrorMessage = "Quantity is required")]
+        public int Quantity { get; set; }
     }
 }
