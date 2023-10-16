@@ -26,5 +26,11 @@ namespace Licensing.Controllers
 
             return View(licences);
         }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
