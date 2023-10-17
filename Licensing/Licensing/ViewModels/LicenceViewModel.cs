@@ -15,7 +15,5 @@ namespace Licensing.ViewModels
         [Required]
         [Column(TypeName = "decimal(10, 2)")]
         public decimal Cost { get; set; }
-
-        public SelectList LicenceSelectList { get; set; }
     }
 }

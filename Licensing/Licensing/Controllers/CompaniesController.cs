@@ -59,18 +59,5 @@ namespace Licensing.Controllers
 
             return View(model);
         }
-
-        public IActionResult CreateWithLicense()
-        {
-            var licences = _context.Licences.ToList();
-            var licenceSelectList = new SelectList(licences, "LicenseId", "Name");
-
-            var viewModel = new CompanyLicenceViewModel
-            {
-                LicenceSelectList = licenceSelectList
-            };
-
-            return View(viewModel);
-        }
     }
 }
