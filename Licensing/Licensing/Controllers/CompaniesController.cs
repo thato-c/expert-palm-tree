@@ -53,7 +53,7 @@ namespace Licensing.Controllers
                 // Add and save the new company to the database
                 _context.Companies.Add(Company);
                 await _context.SaveChangesAsync();
-
+                    
                 return RedirectToAction("Index");
             }
 
