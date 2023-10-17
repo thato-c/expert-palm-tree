@@ -2,6 +2,7 @@
 using Licensing.Models;
 using Licensing.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace Licensing.Controllers
@@ -25,7 +26,7 @@ namespace Licensing.Controllers
                 ViewBag.Message = "No Companies Registered.";
                 return View();
             }
-            
+
             return View(companies);
         }
 
@@ -57,6 +58,19 @@ namespace Licensing.Controllers
             }
 
             return View(model);
+        }
+
+        public IActionResult CreateWithLicense()
+        {
+            var licences = _context.Licences.ToList();
+            var licenceSelectList = new SelectList(licences, "LicenseId", "Name");
+
+            var viewModel = new CompanyLicenceViewModel
+            {
+                LicenceSelectList = licenceSelectList
+            };
+
+            return View(viewModel);
         }
     }
 }

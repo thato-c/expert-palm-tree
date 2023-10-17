@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Licensing.ViewModels
@@ -14,5 +15,7 @@ namespace Licensing.ViewModels
         [Required]
         [Column(TypeName = "decimal(10, 2)")]
         public decimal Cost { get; set; }
+
+        public SelectList LicenceSelectList { get; set; }
     }
 }
