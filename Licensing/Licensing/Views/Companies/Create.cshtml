@@ -1,5 +1,5 @@
 ﻿@using Licensing.ViewModels;
-@model CompanyLicenceViewModel
+@model CompanyViewModel
 
 @{
 }
@@ -8,27 +8,22 @@
 
 <form asp-controller="Companies" asp-action="Create" method="post">
     <div class="form-group">
-        <label asp-for="CompanyDetails.Name">Company Name</label>
-        <input asp-for="CompanyDetails.Name" class="form-control" />
-        <span asp-validation-for="CompanyDetails.Name" class="text-danger"></span>
+        <label asp-for="Name">Company Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="CompanyDetails.PhoneNumber">Phone</label>
-        <input asp-for="CompanyDetails.PhoneNumber" class="form-control" />
-        <span asp-validation-for="CompanyDetails.PhoneNumber" class="text-danger"></span>
+        <label asp-for="PhoneNumber">Phone</label>
+        <input asp-for="PhoneNumber" class="form-control" />
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="CompanyDetails.Email">Email</label>
-        <input asp-for="CompanyDetails.Email" class="form-control" />
-        <span asp-validation-for="CompanyDetails.Email" class="text-danger"></span>
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
     </div>
 
-    <div class="form-group">
-        <label asp-for="Quantity">Number of Licences</label>
-        <input asp-for="Quantity" class="form-control" type="number" min="1"/>
-        <span asp-validation-for="Quantity" class="text-danger"></span>
-    </div>
     <button type="submit">Add Company</button>
 </form>
